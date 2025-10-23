@@ -129,10 +129,10 @@ main {
     border-right: 2px solid rgba(255, 255, 255, 0.03)
 }
 
-.cell:nth-child(n+19):nth-child(-n+27),
+/*.cell:nth-child(n+19):nth-child(-n+27),
 .cell:nth-child(n+46):nth-child(-n+54) {
-    /* no-op placeholder to avoid :nth-child complexity */
-}
+    no-op placeholder to avoid :nth-child complexity
+}*/
 
 /* we'll apply block borders with JS to be precise */
 
