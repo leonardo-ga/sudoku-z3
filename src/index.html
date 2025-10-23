@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sudoku - Play in your Browser</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script type="module" src="./script.js"></script>
+
+</head>
+
+<body>
+    <div class="app">
+        <header>
+            <h1>Sudoku - Play in your browser</h1>
+            <div class="controls">
+                <label for="difficulty" style="color:var(--muted);font-size:14px">Difficulty</label>
+                <select id="difficulty">
+                    <option value="35">Easy</option>
+                    <option value="45" selected>Medium</option>
+                    <option value="55">Hard</option>
+                </select>
+                <button id="newBtn" class="primary">New Puzzle</button>
+                <button id="solveBtn">Solve</button>
+            </div>
+        </header>
+
+        <main>
+            <div class="board-wrap">
+                <div id="board" class="board" aria-label="sudoku board"></div>
+            </div>
+
+            <aside class="sidebar">
+                <div class="info">
+                    <div style="display:flex;justify-content:space-between;align-items:center">
+                        <div>
+                            <strong id="time">00:00</strong>
+                            <div style="font-size:13px;color:var(--muted)">Elapsed</div>
+                        </div>
+                        <div style="text-align:right">
+                            <div id="mistakes" style="font-weight:700">0</div>
+                            <div style="font-size:13px;color:var(--muted)">Mistakes</div>
+                        </div>
+                    </div>
+                    <div class="status" id="statusMsg"
+                        style="margin-top:10px;background:transparent;color:var(--muted)">Good luck — fill the board!
+                    </div>
+                </div>
+
+                <div style="margin-bottom:10px">
+                    <div style="font-size:13px;color:var(--muted);margin-bottom:6px">Number pad</div>
+                    <div class="kbd" id="numpad"></div>
+                </div>
+
+                <div style="display:flex;gap:8px;margin-bottom:10px">
+                    <button id="checkBtn">Check</button>
+                    <button id="hintBtn">Hint</button>
+                    <button id="undoBtn">Undo</button>
+                </div>
+
+                <div class="footer">
+                    <small>Click a cell and press 1–9, or use the number pad. Prefilled numbers are locked. Hints reveal
+                        one cell. 'Solve' shows the full solution.</small>
+                </div>
+            </aside>
+        </main>
+    </div>
+</body>
+
+</html>
